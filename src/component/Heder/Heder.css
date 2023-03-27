@@ -1,0 +1,17 @@
+.heder{
+    height: 80px;
+    background: #1C2B35;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+
+}
+nav.heder a{
+    text-decoration: none;
+    color: white;
+   margin-left: 30px;
+}
+nav.heder a:hover{
+    color: orange;
+}
