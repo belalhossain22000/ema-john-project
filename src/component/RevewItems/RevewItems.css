@@ -1,0 +1,32 @@
+.revewDetals{
+    height: 108px;
+    width: 600px;
+    border: 1px solid black;
+    margin: 50px auto;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center  ; */
+    gap: 10px;
+}
+.revewDetals img{
+    height: 91px;
+    width: 91px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.revewitemdetails{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    
+    
+}
+p{
+    margin: 0px;
+}
+h4{
+    margin: 0px;
+}
