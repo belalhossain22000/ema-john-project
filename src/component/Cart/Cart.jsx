@@ -4,6 +4,9 @@ import "./Cart.css";
 const Cart = (props) => {
   console.log(props.cart);
   const { cart } = props;
+  const { handleClearCart } = props;
+  const { children } = props;
+
   //   totaol product
   let totalPrice = 0;
   let totalShipping = 0;
@@ -19,6 +22,9 @@ const Cart = (props) => {
   }
   const tax = (totalPrice * 7) / 100;
   const grandTotal = totalShipping + totalPrice + tax;
+
+
+  
   //   return from start heresss
   return (
     <div className="cart">
@@ -28,6 +34,8 @@ const Cart = (props) => {
       <p>Total shiping charge: ${totalShipping} </p>
       <p>Tax : ${tax.toFixed(2)} </p>
       <h6>Grand Total : ${grandTotal.toFixed(2)}</h6>
+      <button onClick={handleClearCart}>clear cart</button>
+      {children}
     </div>
   );
 };

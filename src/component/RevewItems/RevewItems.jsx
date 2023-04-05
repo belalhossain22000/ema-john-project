@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import "./RevewItems.css";
 
-const RevewItems = ({ product,handleremovefromcart }) => {
+const RevewItems = ({ product,handleremovefromcart,children }) => {
   const { id, name, img, quantity, price } = product;
   return (
     <div>
@@ -17,6 +17,7 @@ const RevewItems = ({ product,handleremovefromcart }) => {
         <button onClick={()=>handleremovefromcart(id)} >
           <FontAwesomeIcon icon={faTrashAlt} />
         </button>
+       
       </div>
     </div>
   );
