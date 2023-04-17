@@ -17,3 +17,7 @@ nav.heder a{
 nav.heder a:hover{
     color: orange;
 }
+
+.user-mail{
+    color: white;
+}
