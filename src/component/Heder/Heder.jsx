@@ -19,7 +19,7 @@ const Heder = () => {
     }
     return (
         <nav className='heder'>
-            <img src={logo} alt="" />
+           <Link to="/"> <img src={logo} alt="" /></Link>
             <div>
                
                 <Link to="/">shop</Link>
