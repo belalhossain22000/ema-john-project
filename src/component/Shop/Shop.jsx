@@ -32,12 +32,6 @@ const Shop = () => {
 
   //!products data load
 
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/products")
-  //     .then((res) => res.json())
-  //     .then((data) => setProducts(data));
-  // }, []);
-
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
@@ -52,18 +46,32 @@ const Shop = () => {
 
   useEffect(() => {
     const storedCart = getShoppingCart();
-    const savedCart = [];
-    for (const id in storedCart) {
-      const addedPeoduct = products.find((products) => products._id === id);
-      // console.log(saveProduct)
-      if (addedPeoduct) {
-        const quantity = storedCart[id];
-        addedPeoduct.quantity = quantity;
-        savedCart.push(addedPeoduct);
-      }
-    }
-    setCart(savedCart);
-  }, [products]);
+    const ids = Object.keys(storedCart);
+
+    fetch(`http://localhost:5000/productsByIds`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(ids),
+    })
+      .then((res) => res.json())
+      .then((cartProducts) => {
+        const savedCart = [];
+        for (const id in storedCart) {
+          const addedPeoduct = cartProducts.find(
+            (products) => products._id === id
+          );
+          // console.log(saveProduct)
+          if (addedPeoduct) {
+            const quantity = storedCart[id];
+            addedPeoduct.quantity = quantity;
+            savedCart.push(addedPeoduct);
+          }
+        }
+        setCart(savedCart);
+      });
+  }, []);
 
   const handaleAddToCart = (product) => {
     console.log(product);
