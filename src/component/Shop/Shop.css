@@ -18,3 +18,11 @@
     /* background-color: red; */
     margin: 45px;
 }
+
+.paginations  {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.selected {
+    background-color: #FF9900;
+}
