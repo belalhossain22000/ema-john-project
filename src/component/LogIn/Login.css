@@ -33,14 +33,18 @@
   
   input[type="email"],
   input[type="password"] {
-    padding: 5px;
+    padding: 10px;
     margin-top: 5px;
+    width: 91%;
+    border-radius: 5px;
+    /* border: none; */
+
   }
   
   button[type="submit"] {
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #FFE0B2;
+    color: black;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -66,5 +70,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   
+
+  .login{
+    text-align: center;
+  }

@@ -22,13 +22,13 @@ const Heder = () => {
            <Link to="/"> <img src={logo} alt="" /></Link>
             <div>
                
-                <Link to="/">shop</Link>
+                <Link to="/">Shop</Link>
                 <Link to="/orders">Order Review</Link>
                 <Link to="/inventory">Manage Inventory</Link>
-                <Link to="/login">Login</Link>
-                <Link to="/register">Register</Link>
+               
+                
                 {
-                    user?<p className='user-mail'>{user.email} <button onClick={handleLogout}>signOut</button></p>:<Link to="/login">login</Link>
+                    user?<p className='user-mail'>{user.email} <button onClick={handleLogout}>SignOut</button></p>:<Link to="/login">Login</Link>
                 }
             </div>
         </nav>
